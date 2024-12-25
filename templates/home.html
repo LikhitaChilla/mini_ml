@@ -2,6 +2,80 @@
 <html>
 <head>
     <title>Student Exam Performance Indicator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #444444;
+            text-align: center;
+        }
+
+        label {
+            font-size: 1em;
+            color: #555555;
+        }
+
+        select, input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            text-align: center;
+            color: #666666;
+        }
+    </style>
 </head>
 <body>
     <div class="login">
@@ -17,7 +91,6 @@
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
-                <br><br>
 
                 <label for="ethnicity">Race or Ethnicity:</label>
                 <select id="ethnicity" name="ethnicity" required>
@@ -28,7 +101,6 @@
                     <option value="group D">Group D</option>
                     <option value="group E">Group E</option>
                 </select>
-                <br><br>
 
                 <label for="parental_education">Parental Level of Education:</label>
                 <select id="parental_education" name="parental_level_of_education" required>
@@ -40,7 +112,6 @@
                     <option value="some college">Some College</option>
                     <option value="some high school">Some High School</option>
                 </select>
-                <br><br>
 
                 <label for="lunch">Lunch Type:</label>
                 <select id="lunch" name="lunch" required>
@@ -48,7 +119,6 @@
                     <option value="free/reduced">Free/Reduced</option>
                     <option value="standard">Standard</option>
                 </select>
-                <br><br>
 
                 <label for="test_preparation">Test Preparation Course:</label>
                 <select id="test_preparation" name="test_preparation_course" required>
@@ -56,15 +126,12 @@
                     <option value="none">None</option>
                     <option value="completed">Completed</option>
                 </select>
-                <br><br>
 
                 <label for="reading_score">Reading Score (0-100):</label>
                 <input type="number" id="reading_score" name="reading_score" min="0" max="100" required>
-                <br><br>
 
                 <label for="writing_score">Writing Score (0-100):</label>
                 <input type="number" id="writing_score" name="writing_score" min="0" max="100" required>
-                <br><br>
 
                 <button type="submit">Predict Your Math Score</button>
             </fieldset>
